@@ -1,0 +1,28 @@
+{
+    "books":[
+        {
+            "id":1,
+            "title":"Casual Vacancy, The",
+            "author":"Rowling, J. K.",
+            "year":2012
+        },
+        {
+            "id":2,
+            "title":"Simon's Cat Vs. the World!",
+            "author":"Tofield, Simon",
+            "year":2012
+        },
+        {
+            "id":3,
+            "title":"Game of Thrones, A",
+            "author":"Martin, George R.R.",
+            "year":1998
+        },
+        {
+            "id":4,
+            "title":"Mockingjay",
+            "author":"Collins, Suzanne",
+            "year":2010
+        }
+    ]
+}
