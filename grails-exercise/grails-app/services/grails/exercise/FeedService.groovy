@@ -13,6 +13,7 @@ class FeedService {
 
     def grailsApplication
 	def feedCacheService
+	//def feedOnlineService
 
     def getBooksFeed() {
         //ConfigurationHolder ch;
@@ -20,8 +21,9 @@ class FeedService {
         //def input = ctx.getResourceAsStream(grailsApplication.config.bookStore.feedFile)
 		//return new JsonSlurper().parseText(input.text)
         
-		//return new JsonSlurper().parseText(getBooksFeedOnline("https://s3.amazonaws.com/conmio-recruitment/api/books-feed.json"))
+		//return new JsonSlurper().parseText(feedOnlineService.getBooksFeedOnline("https://s3.amazonaws.com/conmio-recruitment/api/books-feed.json"))
 		
+		//return Json format text file
 		return new JsonSlurper().parseText(feedCacheService.getData("Books"))
     }
 	
@@ -31,8 +33,9 @@ class FeedService {
 		//def input = ctx.getResourceAsStream(grailsApplication.config.top3.feedFile)
 		//return new JsonSlurper().parseText(input.text)		
 		
-		//return new JsonSlurper().parseText(getBooksFeedOnline("https://s3.amazonaws.com/conmio-recruitment/api/sales-feed.json"))
+		//return new JsonSlurper().parseText(feedOnlineService.getBooksFeedOnline("https://s3.amazonaws.com/conmio-recruitment/api/sales-feed.json"))
 		
+		//return Json format text file
 		return new JsonSlurper().parseText(feedCacheService.getData("Top3"))
 	}
 }
